@@ -1,0 +1,10 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.border_none td , th,tr{
+	border: none !important;
+}
+table tr>td:first-child {
+	width: 20%;;
+}
