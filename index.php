@@ -15,13 +15,15 @@
 </head>
 	
 <body>
-	<div class="header_area">
-		
+	
+	<div class="header_area well text-center text-primary">
+		<h3>Donate Blood</h3>
 	</div>
 	<div class="content_area">
 		<div class="container text-center">
 			<a href="pages/search.php" class="btn btn-primary btn-lg">Search Donor</a>
 			<a href="pages/form.php" class="btn btn-success btn-lg">Want to Donate Blood</a>
+			<a href="pages/login.php" class="btn btn-info btn-lg">Already a member ?</a>
 		</div>
 	</div>
 	<footer class="footer_area">

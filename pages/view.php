@@ -7,26 +7,7 @@
 	$result = $query->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Donate Blood</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../css/font-awesome.min.css">
-  <link rel="stylesheet" href="../css/style.css" >
-
-</head>
-	
-<body>
-	<div class="header_area">
-		
-	</div>
+	<?php include 'head.php'?>
 	<div class="content_area">
 		<div class="container table-responsive">
 			<table class="table table-bordered">
@@ -56,6 +37,9 @@
 				
 				?>
 			</table>
+			<div class="well text-center">
+				<a class="btn btn-primary" href="search.php">Back</a>
+			</div>
 		</div>
 	</div>
 	<footer class="footer_area">

@@ -8,75 +8,53 @@
 	$query->execute(array($name,$password));
 	$result = $query->fetch(PDO::FETCH_ASSOC);
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Donate Blood</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../css/font-awesome.min.css">
-  <link rel="stylesheet" href="../css/style.css" >
-
-</head>
-	
-<body>
-	<div class="header_area well text-center">
-		
-	</div>
+	<?php include 'head.php'?>
 	<div class="content_area">
 		<div class="container table-responsive">
 			<table class="table">
-				<div class="form-group">
-					<tr>
-						<td>Name </td>
-						<td><?php echo $result['name'] ?></td>
-					</tr>
-				</div>
+				<tr>
+					<td>Name </td>
+					<td><?php echo $result['name'] ?></td>
+				</tr>
 				<tr>
 					<td>Email </td>
 					<td><?php echo $result['mail'] ?></td>
 				</tr>
-				</div>
 				<tr>
 						<td>Password</td>
 						<td><?php echo $result['password'] ?></td>
-					</tr>
-				</div>
+				</tr>
 				<tr>
 						<td>Age</td>
 						<td><?php echo $result['age'] ?></td>
-					</tr>
-				</div>
+				</tr>
 				<tr>
 						<td>Blood Group</td>
 						<td><?php echo $result['blood_group'] ?></td>
-					</tr>
-				</div>
+				</tr>
 				<tr>
 					<td>Division </td>
 					<td><?php echo $result['division'] ?></td>
 				</tr>
-				</div>
 				<tr>
 						<td>Number</td>
 						<td><?php echo $result['number'] ?></td>
-					</tr>
-				</div>
+				</tr>
 				<tr>
 						<td>Gender</td>
 						<td><?php echo $result['gender'] ?></td>
-					</tr>
-				</div>
+				</tr>
 				<tr>
 						<td>Availability</td>
 						<td><?php echo $result['available'] ?></td>
-					</tr>
-				</div>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="update_mine.php?id=<?php echo $result['id']?>" class="btn btn-primary" name="submit" id="submit" >change data</a>
+						<a href="login.php" class="btn btn-info" name="submit" id="submit" >Logout</a>
+					</td>
+				</tr>
 			</table>
 		</div>
 	</div>
